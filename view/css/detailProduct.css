@@ -1,0 +1,821 @@
+/* detailProduct.css */
+
+/* ---- Phần chung cho nội dung Detail ---- */
+.content_detailProduct {
+  display: flex;
+  margin: 0 auto;
+  width: 80%;
+  margin-top: 60px;
+}
+.inf_product,
+.img_product {
+  width: 50%;
+}
+.image_shirt {
+  width: 80%;
+}
+.image_shirt_detail {
+  width: 25%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.image_shirt_detail:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+
+/* Tiêu đề, giá, trạng thái */
+.title_inf_products {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.price_inf_products {
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+.status_inf_products {
+  font-size: 15px;
+  margin-bottom: 16px;
+}
+.status_color_inf {
+  color: green; /* “còn hàng” mặc định xanh lá */
+}
+
+/* ---- MÀU SẮC ---- */
+.color_inf_products {
+  margin-top: 20px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+/* Wrapper cho hàng ngang các ô màu */
+.item_box_color {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+/* Ẩn radio gốc */
+.item_box_color input[type="radio"] {
+  display: none;
+}
+
+/* Ô màu (20×20 px), mặc định trong suốt với border xám */
+.color-swatch {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  background-color: transparent;
+  transition: background-color 0.2s ease, border-color 0.2s;
+  flex-shrink: 0;
+}
+
+/* Label chứa ô màu + tên, cắt tên sau 20 ký tự */
+.color-item label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  max-width: 20ch; /* cắt 20 ký tự, show "…" khi vượt */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Tên màu (text) bên cạnh ô màu */
+.color-item .color-name {
+  margin-left: 6px;
+  font-size: 14px;
+  color: #333;
+  flex-shrink: 1;
+}
+
+/* Khi radio màu được checked, CSS sinh bằng PHP trong DetailProducts.php sẽ override background-color & border-color */
+
+/* ---- KÍCH THƯỚC ---- */
+.box_option_size {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+/* Ẩn radio gốc */
+.box_option_size input[type="radio"] {
+  display: none;
+}
+
+.size-item label {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 6px 14px;
+  transition: all 0.25s ease;
+  user-select: none;
+  max-width: 20ch;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Hover */
+.size-item label:hover {
+  border-color: #ff7f00;
+  background-color: #fff5ee;
+  color: #ff7f00;
+  transform: scale(1.05);
+  box-shadow: 0 0 8px rgba(255, 127, 0, 0.3);
+}
+
+/* Khi được chọn */
+.box_option_size input[type="radio"]:checked + label {
+  background-color: #ff7f00;
+  color: #fff;
+  border-color: #ff7f00;
+  transform: scale(1.05);
+}
+
+/* Khi radio size được checked, CSS sinh bằng PHP trong DetailProducts.php sẽ override border-color & background-color */
+
+/* ---- SỐ LƯỢNG & NÚT THÊM GIỎ HÀNG ---- */
+.quantity_inf_products {
+  margin-top: 10px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.quantity_box {
+  display: flex;
+  justify-content: start;
+  gap: 30px;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 24px;
+}
+.detail_quatity {
+  display: flex;
+  align-items: center;
+}
+.totalProducts {
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+}
+#input-qty {
+  width: 40px;
+  text-align: center;
+  margin: 0 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.btn_quantity_box {
+  padding: 12px 30px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: bold;
+  border: 0.5px solid #f05023;
+  background-color: #f05023;
+  transition: transform 0.5s ease;
+  text-decoration: none;
+}
+.btn_quantity_box:hover {
+  cursor: pointer;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ---- CHI TIẾT SẢN PHẨM ---- */
+.inf_detailProducts {
+  margin-top: 20px;
+}
+.title_detai_products {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.box_detail_products_inf > li {
+  margin: 5px 0;
+  line-height: 25px;
+}
+
+/* ---- SẢN PHẨM LIÊN QUAN ---- */
+.Related_products {
+  margin-top: 50px;
+}
+.title_related_products {
+  text-align: center;
+}
+.product_related {
+  display: flex;
+  padding: 0 20px;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 20px;
+}
+.item_product_related {
+  transition: transform 0.5s ease;
+  padding: 20px;
+  border-radius: 10px;
+  width: 20%;
+}
+.item_product_related:hover {
+  cursor: pointer;
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.boxname_product_related {
+  min-height: 40px;
+}
+.image_products_related {
+  width: 100%;
+}
+.btn_view_more {
+  display: inline-block;
+  padding: 12px 36px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, #ff8c00, #ff3cac, #784ba0);
+  background-size: 200% 200%;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(255, 102, 102, 0.4);
+  transition: all 0.4s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn_view_more::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: skewX(-20deg);
+  transition: 0.5s;
+}
+
+.btn_view_more:hover::before {
+  left: 125%;
+}
+
+.btn_view_more:hover {
+  background-position: right center;
+  box-shadow: 0 12px 24px rgba(255, 105, 135, 0.5);
+  transform: translateY(-2px) scale(1.05);
+}
+
+.btn_view_more:active {
+  transform: scale(0.97);
+  box-shadow: 0 4px 12px rgba(255, 105, 135, 0.3);
+}
+
+/* detailProduct.css */
+
+/* ---- Phần chung cho nội dung Detail ---- */
+.content_detailProduct {
+  display: flex;
+  margin: 0 auto;
+  width: 80%;
+  margin-top: 60px;
+}
+.inf_product,
+.img_product {
+  width: 50%;
+}
+.image_shirt {
+  width: 80%;
+}
+.image_shirt_detail {
+  width: 25%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.image_shirt_detail:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+
+/* Tiêu đề, giá, trạng thái */
+.title_inf_products {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.price_inf_products {
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+.status_inf_products {
+  font-size: 15px;
+  margin-bottom: 16px;
+}
+.status_color_inf {
+  color: green; /* “còn hàng” mặc định xanh lá */
+}
+
+/* ---- MÀU SẮC ---- */
+.color_inf_products {
+  margin-top: 20px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+/* Wrapper cho hàng ngang các ô màu */
+.item_box_color {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+/* Ẩn radio gốc */
+.item_box_color input[type="radio"] {
+  display: none;
+}
+
+/* Ô màu (20×20 px), mặc định trong suốt với border xám */
+.color-swatch {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  background-color: transparent;
+  transition: background-color 0.2s ease, border-color 0.2s;
+  flex-shrink: 0;
+}
+
+/* Label chứa ô màu + tên, cắt tên sau 20 ký tự */
+.color-item label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  max-width: 20ch; /* cắt 20 ký tự, show "…" khi vượt */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Tên màu (text) bên cạnh ô màu */
+.color-item .color-name {
+  margin-left: 6px;
+  font-size: 14px;
+  color: #333;
+  flex-shrink: 1;
+}
+
+/* Khi radio màu được checked, CSS sinh bằng PHP trong DetailProducts.php sẽ override background-color & border-color */
+
+/* ---- KÍCH THƯỚC ---- */
+.box_option_size {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+/* Ẩn radio gốc */
+.box_option_size input[type="radio"] {
+  display: none;
+}
+
+.size-item label {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 6px 14px;
+  transition: all 0.25s ease;
+  user-select: none;
+  max-width: 20ch;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Hover */
+.size-item label:hover {
+  border-color: #ff7f00;
+  background-color: #fff5ee;
+  color: #ff7f00;
+  transform: scale(1.05);
+  box-shadow: 0 0 8px rgba(255, 127, 0, 0.3);
+}
+
+/* Khi được chọn */
+.box_option_size input[type="radio"]:checked + label {
+  background-color: #ff7f00;
+  color: #fff;
+  border-color: #ff7f00;
+  transform: scale(1.05);
+}
+
+/* Khi radio size được checked, CSS sinh bằng PHP trong DetailProducts.php sẽ override border-color & background-color */
+
+/* ---- SỐ LƯỢNG & NÚT THÊM GIỎ HÀNG ---- */
+.quantity_inf_products {
+  margin-top: 10px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.quantity_box {
+  display: flex;
+  justify-content: start;
+  gap: 30px;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 24px;
+}
+.detail_quatity {
+  display: flex;
+  align-items: center;
+}
+.totalProducts {
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+}
+#input-qty {
+  width: 40px;
+  text-align: center;
+  margin: 0 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.btn_quantity_box {
+  padding: 12px 30px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: bold;
+  border: 0.5px solid #f05023;
+  background-color: #f05023;
+  transition: transform 0.5s ease;
+  text-decoration: none;
+}
+.btn_quantity_box:hover {
+  cursor: pointer;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ---- CHI TIẾT SẢN PHẨM ---- */
+.inf_detailProducts {
+  margin-top: 20px;
+}
+.title_detai_products {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.box_detail_products_inf > li {
+  margin: 5px 0;
+  line-height: 25px;
+}
+
+/* ---- SẢN PHẨM LIÊN QUAN ---- */
+.Related_products {
+  margin-top: 50px;
+}
+.title_related_products {
+  text-align: center;
+}
+.product_related {
+  display: flex;
+  padding: 0 20px;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 20px;
+}
+.item_product_related {
+  transition: transform 0.5s ease;
+  padding: 20px;
+  border-radius: 10px;
+  width: 20%;
+}
+.item_product_related:hover {
+  cursor: pointer;
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.boxname_product_related {
+  min-height: 40px;
+}
+.image_products_related {
+  width: 100%;
+}
+.btn_view_more {
+  display: inline-block;
+  padding: 12px 36px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, #ff8c00, #ff3cac, #784ba0);
+  background-size: 200% 200%;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(255, 102, 102, 0.4);
+  transition: all 0.4s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn_view_more::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: skewX(-20deg);
+  transition: 0.5s;
+}
+
+.btn_view_more:hover::before {
+  left: 125%;
+}
+
+.btn_view_more:hover {
+  background-position: right center;
+  box-shadow: 0 12px 24px rgba(255, 105, 135, 0.5);
+  transform: translateY(-2px) scale(1.05);
+}
+
+.btn_view_more:active {
+  transform: scale(0.97);
+  box-shadow: 0 4px 12px rgba(255, 105, 135, 0.3);
+}
+
+/* feedback wrapper */
+.feedback-container {
+  width: 80%; /* hoặc max-width: 1200px */
+  margin: 40px auto 0;
+  padding: 0;
+}
+
+/* khung feedback */
+.feedback-container .product-feedback-section {
+  background: #fff9f5;
+  border: 1px solid #f2f2f2;
+  border-radius: 4px;
+  padding: 24px;
+}
+
+/* summary */
+.feedback-container .feedback-summary {
+  max-width: 800px;
+  margin: 0 auto 24px;
+}
+
+/* list */
+.feedback-container .feedback-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+/* mỗi item */
+.feedback-container .feedback-item {
+  padding: 24px 0;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+/* header */
+.feedback-container .feedback-header {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.feedback-container .feedback-header .avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.feedback-container .header-info .stars {
+  color: #fadb14;
+  margin: 4px 0;
+}
+.feedback-container .header-info .date {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* comment text */
+.feedback-container .comment {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+/* media thumbnails */
+.feedback-container .feedback-media {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.feedback-container .feedback-media img,
+.feedback-container .feedback-media video {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.feedback-container {
+  width: 80%;
+  margin: 40px auto;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.feedback-container .product-feedback-section {
+  background: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.product-feedback-section h3 {
+  margin: 0;
+  padding: 16px 0;
+  background: transparent;
+  color: #111;
+  /* Đen đậm */
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  font-weight: 700;
+  border-bottom: none;
+  box-shadow: none;
+}
+
+.feedback-summary {
+  padding: 12px 16px;
+  border-bottom: 1px solid #f2f2f2;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.feedback-summary .avg-score {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff6600;
+}
+
+.feedback-summary .stars {
+  font-size: 1.2rem;
+  color: #fadb14;
+}
+
+.feedback-summary .total {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.feedback-summary .sum-stars {
+  margin-left: auto;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.feedback-form {
+  padding: 16px;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.feedback-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.feedback-item {
+  padding: 16px;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.feedback-item:last-child {
+  border-bottom: none;
+}
+
+.feedback-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.feedback-header .header-info strong {
+  display: block;
+  font-size: 1rem;
+  color: #333;
+}
+
+.header-info .stars {
+  font-size: 1rem;
+  color: #fadb14;
+  margin: 4px 0;
+}
+
+.header-info .date {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.comment {
+  margin: 8px 0;
+  line-height: 1.5;
+  color: #444;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.no-feedback {
+  padding: 16px;
+  text-align: center;
+  color: #777;
+}
+
+.feedback-pagination {
+  text-align: center;
+  margin: 16px 0;
+}
+
+.feedback-pagination a {
+  display: inline-block;
+  margin: 0 4px;
+  padding: 6px 10px;
+  background: #eee;
+  color: #333;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.2s;
+  min-width: 32px;
+  text-align: center;
+}
+
+.feedback-pagination a:hover {
+  background: #ff9c42;
+  color: #fff;
+}
+
+.feedback-pagination a.active {
+  background: #ff6600;
+  color: #fff;
+  font-weight: bold;
+}
+
+.feedback-pagination a.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+  background: #ddd;
+  color: #aaa;
+}
+
+.feedback-pagination .dot {
+  display: inline-block;
+  margin: 0 6px;
+  color: #999;
+  font-weight: bold;
+}
+
+.feedback-pagination a:first-child,
+.feedback-pagination a:last-child {
+  font-weight: bold;
+}
