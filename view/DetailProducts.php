@@ -3,7 +3,7 @@ include 'inc/header.php';
 include_once 'helpers/format.php';
 $fm = new Format();
 ?>
-<link href="view/css/detailProduct.css" rel="stylesheet" />
+<link href="<?php echo BASE_URL; ?>view/css/detailProduct.css" rel="stylesheet" />
 
 <div class="content">
     <div class="content_detailProduct">
@@ -333,7 +333,7 @@ echo '<a href="?' . http_build_query($qsBase) . '" class="' . ($currentPage == $
             <?php foreach ($relatedProducts as $rp): 
             $rpId   = intval($rp['id']);
             $rpName = htmlspecialchars($rp['name']);
-            $rpImg  = !empty($rp['imgURL_1']) ? htmlspecialchars($rp['imgURL_1']) : '/PIXCAM/view/img/default-product.png';
+            $rpImg  = !empty($rp['imgURL_1']) ? htmlspecialchars($rp['imgURL_1']) : '<?php echo BASE_URL; ?>view/img/default-product.png';
         ?>
             <div class="item_products_home">
                 <!-- Dùng class giống sản phẩm chính để đồng bộ giao diện -->

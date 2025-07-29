@@ -1,6 +1,6 @@
 <?php include 'inc/header.php'; ?>
 
-<link href="view/css/Cart2.css" rel="stylesheet" />
+<link href="<?php echo BASE_URL; ?>view/css/Cart2.css" rel="stylesheet" />
 
 <div class="content">
     <div class="cart-wrapper">

@@ -7,7 +7,7 @@
   $totalPages  = $totalPages  ?? 1;
 ?>
 <?php include 'inc/header.php'; ?>
-<link href="view/css/accountlist.css" rel="stylesheet" />
+<link href="<?php echo BASE_URL; ?>view/css/accountlist.css" rel="stylesheet" />
 <div class="wrapper">
     <div class="cinema-wrapper">
         <div class="cinema-card">

@@ -15,7 +15,7 @@
 }
 
 body {
-  background: var(--bg-light) url("/PIXCAM/view/img/bg-light.jpg") center/cover
+  background: var(--bg-light) url("<?php echo BASE_URL; ?>view/img/bg-light.jpg") center/cover
     no-repeat;
   color: var(--text-dark);
   font-family: var(--font);

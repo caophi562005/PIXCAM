@@ -17,10 +17,10 @@ $qrUrl = sprintf(
   $amount, urlencode($addInfo), urlencode($accountName)
 );
 ?>
-<link rel="shortcut icon" href="/PIXCAM/view/img/home/logo.png" />
+<link rel="shortcut icon" href="<?php echo BASE_URL; ?>view/img/home/logo.png" />
 <title>Thanh Toán - <?= htmlspecialchars($orderCode) ?></title>
 
-<link href="view/css/Transfer.css" rel="stylesheet" />
+<link href="<?php echo BASE_URL; ?>view/css/Transfer.css" rel="stylesheet" />
 <div class="content">
     <h1 class="inf_title_paycart">Chuyển khoản ngân hàng</h1>
     <p>Mã đơn hàng <strong><?= htmlspecialchars($orderCode) ?></strong></p>

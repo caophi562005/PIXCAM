@@ -22,34 +22,34 @@ $fm = new Format();
     <div class="slider-container">
         <div class="slides" id="slides">
             <div class="slide">
-                <img src="/PIXCAM/view/img/Home/banner3.jpg" />
+                <img src="<?php echo BASE_URL; ?>view/img/home/banner3.jpg" />
             </div>
             <div class="slide">
-                <img src="/PIXCAM/view/img/Home/banner1.jpg" />
+                <img src="<?php echo BASE_URL; ?>view/img/home/banner1.jpg" />
             </div>
             <div class="slide">
-                <img src="/PIXCAM/view/img/Home/banner2.jpg" />
+                <img src="<?php echo BASE_URL; ?>view/img/home/banner2.jpg" />
             </div>
             <div class="slide">
-                <img src="/PIXCAM/view/img/Home/layout1.jpg" />
+                <img src="<?php echo BASE_URL; ?>view/img/home/layout1.jpg" />
             </div>
             <div class="slide">
-                <img src="/PIXCAM/view/img/Home/layout2.jpg" />
+                <img src="<?php echo BASE_URL; ?>view/img/home/layout2.jpg" />
             </div>
             <div class="slide">
-                <img src="/PIXCAM/view/img/Home/layout4.jpg" />
+                <img src="<?php echo BASE_URL; ?>view/img/home/layout4.jpg" />
             </div>
             <div class="slide">
-                <img src="/PIXCAM/view/img/Home/layout5.jpg" />
+                <img src="<?php echo BASE_URL; ?>view/img/home/layout5.jpg" />
             </div>
             <div class="slide">
-                <img src="/PIXCAM/view/img/Home/layout6.jpg" />
+                <img src="<?php echo BASE_URL; ?>view/img/home/layout6.jpg" />
             </div>
             <div class="slide">
-                <img src="/PIXCAM/view/img/Home/layout7.jpg" />
+                <img src="<?php echo BASE_URL; ?>view/img/home/layout7.jpg" />
             </div>
             <div class="slide">
-                <img src="/PIXCAM/view/img/Home/layout8.jpg" />
+                <img src="<?php echo BASE_URL; ?>view/img/home/layout8.jpg" />
             </div>
         </div>
         <button onclick="prevSlide()" class="arrow left">❮</button>
@@ -58,13 +58,13 @@ $fm = new Format();
 
 
     <div class="review_home">
-        <div class="item_review" style="background-image: url('/PIXCAM/view/img/Home/review1.jpg');">
+        <div class="item_review" style="background-image: url('<?php echo BASE_URL; ?>view/img/home/review1.jpg');">
             <p class="text_itemReview">PHONG CÁCH NAM</p>
         </div>
-        <div class="item_review" style="background-image: url('/PIXCAM/view/img/Home/review2.jpg');">
+        <div class="item_review" style="background-image: url('<?php echo BASE_URL; ?>view/img/home/review2.jpg');">
             <p class="text_itemReview">PHONG CÁCH NỮ</p>
         </div>
-        <div class="item_review" style="background-image: url('/PIXCAM/view/img/Home/review_3.jpg');">
+        <div class="item_review" style="background-image: url('<?php echo BASE_URL; ?>view/img/home/review_3.jpg');">
             <p class="text_itemReview">ĐIỂM NHẤN TINH TẾ</p>
         </div>
     </div>
@@ -120,26 +120,26 @@ $fm = new Format();
             &#10094;
         </button>
         <div class="poster-carousel">
-            <img src="/PIXCAM/view/img/poster/hinh1.jpg" alt="Image 1" class="image_poster" />
-            <img src="/PIXCAM/view/img/poster/hinh2.jpg" alt="Image 2" class="image_poster" />
-            <img src="/PIXCAM/view/img/poster/hinh3.jpg" alt="Image 3" class="image_poster" />
-            <img src="/PIXCAM/view/img/poster/hinh4.jpg" alt="Image 4" class="image_poster" />
-            <img src="/PIXCAM/view/img/poster/hinh5.jpg" alt="Image 5" class="image_poster" />
-            <img src="/PIXCAM/view/img/poster/hinh6.jpg" alt="Image 6" class="image_poster" />
-            <img src="/PIXCAM/view/img/poster/hinh7.jpg" alt="Image 7" class="image_poster" />
-            <img src="/PIXCAM/view/img/poster/hinh8.jpg" alt="Image 8" class="image_poster" />
-            <img src="/PIXCAM/view/img/poster/hinh9.jpg" alt="Image 9" class="image_poster" />
-            <img src="/PIXCAM/view/img/poster/hinh10.jpg" alt="Image 10" class="image_poster" />
-            <img src="/PIXCAM/view/img/poster/hinh11.jpg" alt="Image 11" class="image_poster" />
-            <img src="/PIXCAM/view/img/poster/hinh12.jpg" alt="Image 12" class="image_poster" />
-            <img src="/PIXCAM/view/img/poster/hinh13.jpg" alt="Image 13" class="image_poster" />
-            <img src="/PIXCAM/view/img/poster/hinh14.jpg" alt="Image 14" class="image_poster" />
-            <img src="/PIXCAM/view/img/poster/hinh15.jpg" alt="Image 15" class="image_poster" />
-            <img src="/PIXCAM/view/img/poster/hinh16.jpg" alt="Image 16" class="image_poster" />
-            <img src="/PIXCAM/view/img/poster/hinh17.jpg" alt="Image 17" class="image_poster" />
-            <img src="/PIXCAM/view/img/poster/hinh18.jpg" alt="Image 18" class="image_poster" />
-            <img src="/PIXCAM/view/img/poster/hinh19.jpg" alt="Image 19" class="image_poster" />
-            <img src="/PIXCAM/view/img/poster/hinh20.jpg" alt="Image 20" class="image_poster" />
+            <img src="<?php echo BASE_URL; ?>view/img/poster/hinh1.jpg" alt="Image 1" class="image_poster" />
+            <img src="<?php echo BASE_URL; ?>view/img/poster/hinh2.jpg" alt="Image 2" class="image_poster" />
+            <img src="<?php echo BASE_URL; ?>view/img/poster/hinh3.jpg" alt="Image 3" class="image_poster" />
+            <img src="<?php echo BASE_URL; ?>view/img/poster/hinh4.jpg" alt="Image 4" class="image_poster" />
+            <img src="<?php echo BASE_URL; ?>view/img/poster/hinh5.jpg" alt="Image 5" class="image_poster" />
+            <img src="<?php echo BASE_URL; ?>view/img/poster/hinh6.jpg" alt="Image 6" class="image_poster" />
+            <img src="<?php echo BASE_URL; ?>view/img/poster/hinh7.jpg" alt="Image 7" class="image_poster" />
+            <img src="<?php echo BASE_URL; ?>view/img/poster/hinh8.jpg" alt="Image 8" class="image_poster" />
+            <img src="<?php echo BASE_URL; ?>view/img/poster/hinh9.jpg" alt="Image 9" class="image_poster" />
+            <img src="<?php echo BASE_URL; ?>view/img/poster/hinh10.jpg" alt="Image 10" class="image_poster" />
+            <img src="<?php echo BASE_URL; ?>view/img/poster/hinh11.jpg" alt="Image 11" class="image_poster" />
+            <img src="<?php echo BASE_URL; ?>view/img/poster/hinh12.jpg" alt="Image 12" class="image_poster" />
+            <img src="<?php echo BASE_URL; ?>view/img/poster/hinh13.jpg" alt="Image 13" class="image_poster" />
+            <img src="<?php echo BASE_URL; ?>view/img/poster/hinh14.jpg" alt="Image 14" class="image_poster" />
+            <img src="<?php echo BASE_URL; ?>view/img/poster/hinh15.jpg" alt="Image 15" class="image_poster" />
+            <img src="<?php echo BASE_URL; ?>view/img/poster/hinh16.jpg" alt="Image 16" class="image_poster" />
+            <img src="<?php echo BASE_URL; ?>view/img/poster/hinh17.jpg" alt="Image 17" class="image_poster" />
+            <img src="<?php echo BASE_URL; ?>view/img/poster/hinh18.jpg" alt="Image 18" class="image_poster" />
+            <img src="<?php echo BASE_URL; ?>view/img/poster/hinh19.jpg" alt="Image 19" class="image_poster" />
+            <img src="<?php echo BASE_URL; ?>view/img/poster/hinh20.jpg" alt="Image 20" class="image_poster" />
         </div>
 
         <button class="btn-scroll btn-right" aria-label="Scroll Right">
@@ -165,7 +165,7 @@ $fm = new Format();
             </p>
         </div>
         <div class="about-image">
-            <img src="/PIXCAM/view/img/Home/about.jpg" alt="Cửa hàng thời trang FashionVibe" />
+            <img src="<?php echo BASE_URL; ?>view/img/home/about.jpg" alt="Cửa hàng thời trang FashionVibe" />
         </div>
     </section>
     <section class="fashion-inspiration">
@@ -179,7 +179,7 @@ $fm = new Format();
 
         <div class="inspiration-cards">
             <a target="_blank" href="https://www.coolmate.me/post/cac-phong-cach-thoi-trang-nam-808" class="card">
-                <img src="/PIXCAM/view/img/poster/fashion1.jpg" alt="Look 1" />
+                <img src="<?php echo BASE_URL; ?>view/img/poster/fashion1.jpg" alt="Look 1" />
                 <div class="card-text">
                     <h3>For Him — Tối Giản & Mạnh Mẽ</h3>
                     <p class="meta-info">Khám phá phong cách nam →</p>
@@ -187,14 +187,14 @@ $fm = new Format();
             </a>
             <a href="https://www.vfestival.vn/cach-phoi-do-dep-cho-nu-ca-tinh-di-choi-du-lich-dao-pho/" target="_blank"
                 class="card">
-                <img src="/PIXCAM/view/img/poster/fashion2.jpg" alt="Look 2" />
+                <img src="<?php echo BASE_URL; ?>view/img/poster/fashion2.jpg" alt="Look 2" />
                 <div class="card-text">
                     <h3>For Her — Thanh Lịch & Cá Tính</h3>
                     <p class="meta-info">Gu thời trang nữ →</p>
                 </div>
             </a>
             <a href="https://bp-guide.vn/AXtIQX6W" class="card" target="_blank">
-                <img src="/PIXCAM/view/img/poster/fashion3.jpg" alt="Look 3" />
+                <img src="<?php echo BASE_URL; ?>view/img/poster/fashion3.jpg" alt="Look 3" />
                 <div class="card-text">
                     <h3>Accessories — Điểm Nhấn Đắt Giá</h3>
                     <p class="meta-info">Phụ kiện tạo chất →</p>
@@ -222,7 +222,7 @@ $fm = new Format();
             </div>
         </div>
         <div class="charity-image">
-            <img src="/PIXCAM/view/img/poster/thiennguyen2.jpg" alt="Hành trình thiện nguyện" />
+            <img src="<?php echo BASE_URL; ?>view/img/poster/thiennguyen2.jpg" alt="Hành trình thiện nguyện" />
         </div>
     </section>
 </div>

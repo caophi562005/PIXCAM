@@ -137,7 +137,7 @@ $fm = new Format();
                         $price  = floatval($product['price'] ?? 0);
                         $imgURL = !empty($product['imgURL_1'])
                                   ? htmlspecialchars($product['imgURL_1'])
-                                  : '/PIXCAM/view/img/default-product.png';
+                                  : "<?php echo BASE_URL; ?>view/img/default-product.png";
 
                         // Giá sale và phần trăm giảm do model đã tính:
                         $hasSale = isset($product['price_sale']) && floatval($product['price_sale']) > 0;

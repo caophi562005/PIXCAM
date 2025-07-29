@@ -1,6 +1,6 @@
 <?php include 'inc/header.php'; ?>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-<link href="view/css/editProduct.css" rel="stylesheet" />
+<link href="<?php echo BASE_URL; ?>view/css/editProduct.css" rel="stylesheet" />
 
 
 <div class="wrapper">

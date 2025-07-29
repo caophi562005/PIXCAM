@@ -1,6 +1,6 @@
    <footer>
        <div class="logo_footer">
-           <img src="/PIXCAM/view/img/home/logo.png" alt="" class="logo_footerIcon" />
+           <img src="<?php echo BASE_URL; ?>view/img/home/logo.png" alt="" class="logo_footerIcon" />
        </div>
        <ul class="contact_footer">
            <li>
@@ -74,7 +74,7 @@
            <i class="fas fa-arrow-up"></i>
        </button>
    </footer>
-   <script src="/PIXCAM/view/js/home.js"></script>
+   <script src="<?php echo BASE_URL; ?>view/js/home.js"></script>
    <script>
 function toggleAccountMenu() {
     const menu = document.getElementById("accountMenu");

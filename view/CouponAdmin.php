@@ -1,6 +1,6 @@
 <?php include 'inc/header.php'; ?>
 
-<link href="view/css/CouponAdmin.css" rel="stylesheet" />
+<link href="<?php echo BASE_URL; ?>view/css/CouponAdmin.css" rel="stylesheet" />
 <div class="wrapper">
     <section class="coupon-section">
         <div class="coupon-container">

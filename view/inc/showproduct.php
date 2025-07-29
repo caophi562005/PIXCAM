@@ -58,7 +58,7 @@
                            <img src="<?= htmlspecialchars($product['imgURL_1']) ?>"
                                alt="<?= htmlspecialchars($product['name']) ?>" class="image_products_home" />
                            <?php else: ?>
-                           <img src="/PIXCAM/view/img/default-product.png" alt="No Image" class="image_products_home" />
+                           <img src="<?php echo BASE_URL; ?>view/img/default-product.png" alt="No Image" class="image_products_home" />
                            <?php endif; ?>
                        </a>
                    </div>

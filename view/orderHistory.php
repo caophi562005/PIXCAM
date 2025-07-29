@@ -11,7 +11,7 @@ $userId = $_SESSION['user_id'];
 $feedbackModel = new FeedbackModel();
 ?>
 
-<link rel="stylesheet" href="view/css/orderHistory.css">
+<link rel="stylesheet" href="<?php echo BASE_URL; ?>view/css/orderHistory.css">
 
 
 <div class="wrapper">

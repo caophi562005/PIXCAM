@@ -6,7 +6,7 @@ unset($_SESSION['flash_success']);
 $flashError = $_SESSION['flash_error'] ?? null;
 unset($_SESSION['flash_error']);
 ?>
-<link href="view/css/feedbackfrom.css" rel="stylesheet" />
+<link href="<?php echo BASE_URL; ?>view/css/feedbackfrom.css" rel="stylesheet" />
 
 <section class="feedback-section">
     <div class="feedback-card">

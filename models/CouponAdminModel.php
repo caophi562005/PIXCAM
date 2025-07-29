@@ -1,5 +1,5 @@
 <?php
-require_once 'lib/database.php';
+require_once 'lib/Database.php';
 
 class CouponAdminModel {
     protected $db;
@@ -92,7 +92,7 @@ class CouponAdminModel {
 
     }
 
-    //Kiểm tra có tồn tại mã coupon trong database
+    //Kiểm tra có tồn tại mã coupon trong Database
     public function existsCode(string $code): bool {
         $sql = "SELECT COUNT(*) AS cnt FROM Coupon WHERE code = ?";
         $res = $this->db->prepareSelect($sql, [$code], "s");

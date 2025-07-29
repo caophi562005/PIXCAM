@@ -1,5 +1,5 @@
 <?php include 'inc/header.php'; ?>
-<link href="view/css/accesPay.css" rel="stylesheet" />
+<link href="<?php echo BASE_URL; ?>view/css/accesPay.css" rel="stylesheet" />
 <div class="wrapper">
     <div class="order-success-wrapper">
         <h1>Thông báo đơn hàng đã đặt thành công!</h1>

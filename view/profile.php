@@ -1,5 +1,5 @@
 <?php include 'inc/header.php'; ?>
-<link href="view/css/profile.css" rel="stylesheet" />
+<link href="<?php echo BASE_URL; ?>view/css/profile.css" rel="stylesheet" />
 <div class="wrapper">
     <div class="main-content">
         <div class="profile-card">

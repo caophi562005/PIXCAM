@@ -24,17 +24,17 @@ function getControllerForId($catId) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PIXCAM</title>
-    <link rel="stylesheet" href="/PIXCAM/view/css/style.css" />
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>view/css/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    <link rel="stylesheet" href="/PIXCAM/view/css/home.css" />
-    <link rel="stylesheet" href="/PIXCAM/view/css/accesPay.css" />
-    <link rel="stylesheet" href="/PIXCAM/view/css/Cart.css" />
-    <link rel="stylesheet" href="/PIXCAM/view/css/CSTV.css" />
-    <link rel="stylesheet" href="/PIXCAM/view/css/Register.css" />
-    <link rel="stylesheet" href="/PIXCAM/view/css/PayCart.css" />
-    <link rel="stylesheet" href="/PIXCAM/view/css/Sale.css" />
-    <link rel="stylesheet" href="/PIXCAM/view/css/Top.css" />
-    <link rel="shortcut icon" href="/PIXCAM/view/img/home/logo.png" />
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>view/css/home.css" />
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>view/css/accesPay.css" />
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>view/css/Cart.css" />
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>view/css/CSTV.css" />
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>view/css/Register.css" />
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>view/css/PayCart.css" />
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>view/css/Sale.css" />
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>view/css/Top.css" />
+    <link rel="shortcut icon" href="<?php echo BASE_URL; ?>view/img/home/logo.png" />
 
     <style>
     #accountMenu a {
@@ -58,7 +58,7 @@ function getControllerForId($catId) {
     <header>
         <div class="logo_header">
             <a href="index.php?controller=home&action=index" class="logo">
-                <img src="/PIXCAM/view/img/home/logo.png" alt="Logo">
+                <img src="<?php echo BASE_URL; ?>view/img/home/logo.png" alt="Logo">
             </a>
         </div>
 

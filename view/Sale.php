@@ -123,7 +123,7 @@ $fm = new Format();
                         $price  = isset($product['price']) ? floatval($product['price']) : 0;
                         $imgURL = !empty($product['imgURL_1'])
                                   ? htmlspecialchars($product['imgURL_1'])
-                                  : '/PIXCAM/view/img/default-product.png';
+                                  : '<?php echo BASE_URL; ?>view/img/default-product.png';
 
                         // Bây giờ chắc chắn có sale_name nếu đang lấy từ getProductsBySale
                         $saleBadge = isset($product['sale_name']) && !empty($product['sale_name'])

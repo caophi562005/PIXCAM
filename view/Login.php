@@ -3,7 +3,7 @@ include 'inc/header.php';
 ?>
 
 
-<link href="view/css/login.css" rel="stylesheet" />
+<link href="<?php echo BASE_URL; ?>view/css/login.css" rel="stylesheet" />
 <div class="login-wrapper">
     <div class="login-box">
         <h2>Đăng nhập</h2>

@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/../models/AccountModel.php';
-require_once __DIR__ . '/../lib/database.php';
+require_once __DIR__ . '/../lib/Database.php';
 
 class ProfileController {
     private $model;

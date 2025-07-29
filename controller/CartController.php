@@ -28,7 +28,7 @@ class CartController
         }
         //Lấy coupon đang áp dụng (nếu có)
         $coupon = $_SESSION['applied_coupon'] ?? null;
-        //Kiểm tra coupon với database đảm bảo admin chưa hủy hoặc xóa coupon đó
+        //Kiểm tra coupon với Database đảm bảo admin chưa hủy hoặc xóa coupon đó
         if ($coupon) {
             $couponM  = new CouponAdminModel();
             $validIds = array_column($couponM->getValid(), 'id');
@@ -117,7 +117,7 @@ class CartController
             list($action, $id) = explode('-', $_POST['change_qty']);
             $id    = intval($id);
             $delta = ($action === 'plus') ? 1 : -1;
-            //Cập nhật database thông qua Model
+            //Cập nhật Database thông qua Model
             $cartModel = new CartModel();
             $cartModel->changeQuantity($id, $delta);
             //Nếu là AJAX, trả về JSON với dữ liệu mới

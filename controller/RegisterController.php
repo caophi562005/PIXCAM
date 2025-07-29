@@ -32,9 +32,9 @@ class RegisterController {
     $confirmPassword = $_POST['confirm_password'] ?? '';
 
     
-    // Kết nối database
+    // Kết nối Database
     require_once 'config/config.php';
-    require_once 'lib/database.php';
+    require_once 'lib/Database.php';
     $db = new Database();
     
 

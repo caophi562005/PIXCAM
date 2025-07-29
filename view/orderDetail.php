@@ -1,5 +1,5 @@
 <?php include 'inc/header.php'; ?>
-<link rel="stylesheet" href="view/css/orderDetail.css">
+<link rel="stylesheet" href="<?php echo BASE_URL; ?>view/css/orderDetail.css">
 
 <h1>Chi tiết đơn hàng</h1>
 

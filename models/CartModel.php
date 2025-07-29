@@ -1,5 +1,5 @@
 <?php
-require_once 'lib/database.php';
+require_once 'lib/Database.php';
 class CartModel {
     protected $db;
     public function __construct() {
